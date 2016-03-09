@@ -7,7 +7,7 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
@@ -27,10 +27,10 @@
           <h5 class="header col s12 light">Scrum Poker Online is the best way for teams to estimate Agile projects.</h5>
         </div>
         <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="login-button" class="btn-large waves-effect waves-light teal lighten-1">Login</a>
+          <a href="#modal1" id="login-button" class="btn-large waves-effect waves-light teal lighten-1">Login</a>
         </div>
         <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="reg-button" class="btn-large waves-effect waves-light teal lighten-1">Registration</a>
+          <a href="#modal2" id="reg-button" class="btn-large waves-effect waves-light teal lighten-1">Registration</a>
         </div>
         <br><br>
 
@@ -57,7 +57,7 @@
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">Simple and easy to play</h5>
+            <h5 class="center">Simple to play</h5>
 
             <p class="light">We give user friendly interface for estimating tasks or issue. Ability to choose all types of Scrum Poker card and ability to create your own cards deck.</p>
           </div>
@@ -94,9 +94,30 @@
     </div>
   </footer>
 
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header1</h4>
+      <p>A bunch of text1</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header2</h4>
+      <p>A bunch of text2</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
+  <script src="js/libs/materialize.min.js"></script>
   <script src="js/init.js"></script>
 
   </body>
