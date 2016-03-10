@@ -1,7 +1,9 @@
 package com.scrumPoker.server.impl;
 
+import com.scrumPoker.dao.UserDao;
 import com.scrumPoker.domain.User;
 import com.scrumPoker.server.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
@@ -13,26 +15,25 @@ import org.springframework.validation.annotation.Validated;
 @Validated
 public class UserServiceImpl implements UserService {
 
-//    @Autowired
-//    @Qualifier("userDao")
-//    private UserDao userDao;
+    @Autowired
+    private UserDao userDao;
 
     @Transactional
     @Override
     public void delete(String login) {
-       // userDao.deleteByLogin(login);
+        userDao.deleteByLogin(login);
     }
 
     @Transactional
     @Override
     public User save(User user) {
-        return null;//userDao.save(user);
+        return userDao.save(user);
     }
 
     @Transactional(readOnly = true)
     @Override
     public User findByLogin(String login) {
-        return null;//userDao.findByLogin(login);
+        return userDao.findByLogin(login);
     }
 
     @Transactional(readOnly = true)

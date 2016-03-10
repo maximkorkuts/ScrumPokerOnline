@@ -3,12 +3,14 @@ package com.scrumPoker.dao;
 import com.scrumPoker.domain.User;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  * User DAO to work with DB
  * Note that this method is not implemented and its working code will be
  * automagically generated from its signature by Spring Data JPA.
  */
+@Repository
 public interface UserDao extends CrudRepository<User, Long> {
 
     /**
@@ -25,6 +27,6 @@ public interface UserDao extends CrudRepository<User, Long> {
     /**
      *  This method will try tu find an User instance and if find, return true.
      */
-    boolean existsByLogin(String login);
+  //  boolean existsByLogin(String login);
 
 }
