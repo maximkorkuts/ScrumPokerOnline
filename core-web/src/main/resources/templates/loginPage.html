@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
   <title>Scrum Poker Online</title>
 
   <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="../static/css/materialize.min.css" th:href="@{/css/materialize.min.css}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../static/css/style.css" th:href="@{/css/style.css}" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
 
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo"><img src="images/ScrumPokerLogo.png" alt="Scrum Poker Online logo" class="scrum-poker-logo"></a>
+      <a id="logo-container" href="#" class="brand-logo"><img src="../static/images/ScrumPokerLogo.png" th:src="@{/images/ScrumPokerLogo.png}" alt="Scrum Poker Online logo" class="scrum-poker-logo"/></a>
     </div>
   </nav>
 
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
-        <br><br>
+        <br/><br/>
         <h1 class="header center teal-text text-lighten-2">Scrum Poker Online</h1>
         <div class="row center">
           <h5 class="header col s12 light">Scrum Poker Online is the best way for teams to estimate Agile projects.</h5>
@@ -32,11 +32,11 @@
         <div class="row center">
           <a href="#modal2" id="reg-button" class="btn-large waves-effect waves-light teal lighten-1 modal-trigger">Registration</a>
         </div>
-        <br><br>
+        <br/><br/>
 
       </div>
     </div>
-    <div class="parallax"><img src="images/people-meeting.jpg" alt="Scrum Poker Online img"></div>
+    <div class="parallax"><img src="../static/images/people-meeting.jpg" th:src="@{/images/people-meeting.jpg}" alt="Scrum Poker Online img"/></div>
   </div>
 
 
@@ -102,13 +102,13 @@
         <form class="col s12">
           <div class="row">
             <div class="input-field col s12">
-              <input id="login" type="text" class="validate">
+              <input id="login" type="text" class="validate"/>
               <label for="login">Login</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="password" type="password" class="validate">
+              <input id="password" type="password" class="validate"/>
               <label for="password">Password</label>
             </div>
           </div>
@@ -128,29 +128,29 @@
         <form class="col s12">
           <div class="row">
             <div class="input-field col s6">
-              <input id="first_name" type="text" class="validate">
+              <input id="first_name" type="text" class="validate"/>
               <label for="first_name">First Name</label>
             </div>
             <div class="input-field col s6">
-              <input id="last_name" type="text" class="validate">
+              <input id="last_name" type="text" class="validate"/>
               <label for="last_name">Last Name</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="login" type="text" class="validate">
+              <input id="login" type="text" class="validate"/>
               <label for="login">Login</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="password" type="password" class="validate">
+              <input id="password" type="password" class="validate"/>
               <label for="password">Password</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="email" type="email" class="validate">
+              <input id="email" type="email" class="validate"/>
               <label for="email">Email</label>
             </div>
           </div>
@@ -165,8 +165,8 @@
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/libs/materialize.js"></script>
-  <script src="js/init.js"></script>
+  <script src="../static/js/libs/materialize.js" th:src="@{/js/libs/materialize.js}"></script>
+  <script src="../static/js/init.js" th:src="@{/js/init.js}"></script>
 
   </body>
 </html>

@@ -3,21 +3,19 @@ package com.scrumPoker.controller;
 import com.scrumPoker.domain.User;
 import com.scrumPoker.server.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author Maxim Korkuts
  * Controller to manage users in application.
  */
-@Controller
+@RestController
 @RequestMapping(value = "/user")
 public class UserController {
 
     @Autowired
-    @Qualifier("userService")
     private UserService userService;
 
     /**
