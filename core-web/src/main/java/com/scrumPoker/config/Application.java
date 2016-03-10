@@ -16,6 +16,10 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import javax.persistence.EntityManager;
 import javax.sql.DataSource;
 
+/**
+ * Main Spring Boot class to configure application.
+ * @author Maxim Korkuts
+ */
 @Configuration
 @EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class , HibernateJpaAutoConfiguration.class})
 @ComponentScan(basePackages = {

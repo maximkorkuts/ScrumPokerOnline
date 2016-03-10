@@ -44,6 +44,7 @@
 				<scrumPoker.db.url>jdbc:mysql://127.0.0.1:3306/scrumPoker</scrumPoker.db.url>
 				<scrumPoker.db.username>root</scrumPoker.db.username>
 				<scrumPoker.db.password>root</scrumPoker.db.password>
+                <scrumPoker.host.name>scrumpoker</scrumPoker.host.name>
 			</properties>
 		</profile>
 		<profile>
@@ -52,6 +53,7 @@
 				<scrumPoker.db.url>jdbc:mysql://127.0.0.1:3306/scrumPoker</scrumPoker.db.url>
 				<scrumPoker.db.username>root</scrumPoker.db.username>
 				<scrumPoker.db.password>root</scrumPoker.db.password>
+                <scrumPoker.host.name>localhost:8080</scrumPoker.host.name>
 			</properties>
 		</profile>
 	</profiles>

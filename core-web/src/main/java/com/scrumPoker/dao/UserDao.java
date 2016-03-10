@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 /**
  * User DAO to work with DB
  * Note that this method is not implemented and its working code will be
- * automagically generated from its signature by Spring Data JPA.
+ * automatically generated from its signature by Spring Data JPA.
  */
 @Repository
 public interface UserDao extends CrudRepository<User, Long> {
