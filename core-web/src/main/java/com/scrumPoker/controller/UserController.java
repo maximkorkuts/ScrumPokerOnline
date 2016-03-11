@@ -73,5 +73,8 @@ public class UserController {
         return "User succesfully updated!";
     }
 
-
+    @RequestMapping("/registration-enter")
+    public String regisEnter() throws Exception {
+        return "mainPage";
+    }
 }
