@@ -67,3 +67,31 @@ footer.page-footer {
 .modal {
   width: 27%;
 }
+
+.btn-floating {
+  width: 57px;
+  height: 55px;
+}
+
+table#meeting-table tr:nth-child(even) {
+  background-color: #eee;
+}
+table#meeting-table tr:nth-child(odd) {
+  background-color:#fff;
+}
+table#meeting-table th	{
+  background-color: #ee6e73;
+  color: white;
+}
+
+table#meeting-table table, th, td	{
+  border: 1px solid black;
+}
+
+a#add-meeting-button {
+  width: auto;
+}
+
+div#modal3 {
+  width: 820px;
+}
