@@ -18,4 +18,12 @@ public class MeetingController {
     public String meetingListPage() throws Exception {
         return "meetingsPage";
     }
+
+    /**
+     * Return main list with all meetings "meetingsPage.html"
+     */
+    @RequestMapping("/view")
+    public String meetingViewPage() throws Exception {
+        return "meetingPageView";
+    }
 }

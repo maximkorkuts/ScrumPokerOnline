@@ -79,12 +79,12 @@ table#meeting-table tr:nth-child(even) {
 table#meeting-table tr:nth-child(odd) {
   background-color:#fff;
 }
-table#meeting-table th	{
+table.entity-table th	{
   background-color: #ee6e73;
   color: white;
 }
 
-table#meeting-table table, th, td	{
+table.entity-table table, th, td	{
   border: 1px solid black;
 }
 
@@ -94,4 +94,15 @@ a#add-meeting-button {
 
 div#modal3 {
   width: 820px;
+}
+
+.input-field input[type=search]:focus {
+  background-color: #26a69a;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  border-radius: 40px;
+}
+
+.input-field input[type=search] {
+  width: 740px;
 }
