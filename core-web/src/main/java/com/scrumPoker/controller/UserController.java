@@ -3,15 +3,15 @@ package com.scrumPoker.controller;
 import com.scrumPoker.domain.User;
 import com.scrumPoker.server.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author Maxim Korkuts
  * Controller to manage users in application.
  */
-@RestController
+@Controller
 @RequestMapping(value = "/user")
 public class UserController {
 
@@ -34,7 +34,7 @@ public class UserController {
         catch (Exception ex) {
             return "Error creating the user: " + ex.toString();
         }
-        return "User succesfully created with id = " + userId;
+        return "User successfully created with id = " + userId;
     }
 
     /**
@@ -73,8 +73,8 @@ public class UserController {
         return "User succesfully updated!";
     }
 
-    @RequestMapping("/registration-enter")
-    public String regisEnter() throws Exception {
-        return "mainPage";
+    @RequestMapping("/account")
+    public String accountPage() throws Exception {
+        return "accountPage";
     }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-    <title>Main menu</title>
+    <title>Issues list</title>
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
@@ -14,13 +14,20 @@
     <nav>
         <div class="nav-wrapper container">
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="" class="white-text">Issues</a></li>
-                <li><a href="" class="white-text">Tasks <span class="new badge">4</span></a></li>
+                <li><a href="meeting/list" class="white-text">Meetings</a></li>
+                <li><a href="issue/list" class="white-text">Issues</a></li>
+                <li><a href="task/list" class="white-text">Tasks <span class="new badge">4</span></a></li>
             </ul>
             <ul class="right hide-on-med-and-down">
-                <li><a href="" class="white-text"><i class="material-icons">search</i></a></li>
+                <li>
+                    <div class="input-field">
+                        <input id="search" type="search" required="required"/>
+                        <label for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                    </div>
+                </li>
                 <li><a href="" class="white-text"><i class="material-icons">refresh</i></a></li>
-                <li><a href="" class="white-text"><i class="material-icons left">perm_identity</i>Account</a></li>
+                <li><a href="/user/account" class="white-text"><i class="material-icons left">perm_identity</i>Account</a></li>
             </ul>
         </div>
     </nav>
@@ -28,15 +35,15 @@
     <div class="container">
         <div class="section">
             <div class="row left">
-                <h5>Meetings</h5>
+                <h5>Issues</h5>
             </div>
             <div class="row right">
-                <a href="#modal3" id="add-meeting-button" class="btn-large waves-effect waves-light teal lighten-1 modal-trigger">
-                    <i class="material-icons left">play_arrow</i>Create meeting
+                <a href="#modal4" id="add-meeting-button" class="btn-large waves-effect waves-light teal lighten-1 modal-trigger">
+                    <i class="material-icons left">play_arrow</i>Create issue
                 </a>
             </div>
             <!-- TODO change table creating and add pagenator-->
-            <table id="meeting-table">
+            <table id="issue-table">
                 <thead>
                 <tr>
                     <th>Title</th>
@@ -90,35 +97,31 @@
     </footer>
 
     <!-- Modal Structure -->
-    <div id="modal3" class="modal">
+    <div id="modal4" class="modal">
         <div class="modal-content">
-            <h4>Create meeting</h4>
+            <h4>Create issue</h4>
             <div class="row">
                 <form class="col s12" action="" method="POST">
                     <div class="row">
                         <div class="input-field col s6">
-                            <input id="login" type="text" class="validate"/>
-                            <label for="login">Title</label>
+                            <input id="issue" type="text" class="validate"/>
+                            <label for="issue">Title</label>
                         </div>
                         <div class="input-field col s12 m6">
-                            <select class="browser-default">
-                                <option value="" disabled="disabled" selected="selected">Choose your card brand</option>
-                                <option value="1">Scrum</option>
-                                <option value="2">Fibonacci</option>
-                                <option value="3">Playing cards</option>
-                            </select>
+                            <input id="meeting" type="text" class="validate"/>
+                            <label for="meeting">Meeting title</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="switch">
-                            <h6>Do you want to save actions history?</h6>
-                            <label>
-                                off
-                                <input type="checkbox"/>
-                                <span class="lever"></span>
-                                on
-                            </label>
-                        </div>
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">mode_edit</i>
+                                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                                    <label for="icon_prefix2">Description</label>
+                                </div>
+                            </div>
+                        </form>
                     </div>
 
                     <div class="modal-footer">

@@ -30,9 +30,4 @@ public class LoginController {
         return "loginPage";
     }
 
-    @RequestMapping("/login/process-login")
-    public String loginEnter() throws Exception {
-        return "mainPage";
-    }
-
 }
