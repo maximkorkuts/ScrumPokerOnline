@@ -1,4 +1,6 @@
-package com.scrumPoker.domain;
+package com.scrumPoker.domain.impl;
+
+import com.scrumPoker.domain.CommonStatusEntity;
 
 /**
  * Entity name in meeting. This entity can have a lot of tasks.

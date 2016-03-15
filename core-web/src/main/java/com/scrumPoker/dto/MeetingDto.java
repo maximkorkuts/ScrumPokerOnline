@@ -1,6 +1,6 @@
 package com.scrumPoker.dto;
 
-import com.scrumPoker.domain.dict.CardBrand;
+import com.scrumPoker.domain.impl.dict.CardBrand;
 
 /**
  * Use for create and update entity.

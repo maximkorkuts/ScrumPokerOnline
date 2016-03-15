@@ -1,4 +1,4 @@
-package com.scrumPoker.domain.dict;
+package com.scrumPoker.domain.impl.dict;
 
 /**
  * Enum with all commentable entities.

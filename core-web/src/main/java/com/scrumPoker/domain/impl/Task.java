@@ -1,4 +1,6 @@
-package com.scrumPoker.domain;
+package com.scrumPoker.domain.impl;
+
+import com.scrumPoker.domain.CommonStatusEntity;
 
 /**
  * Entity that user need to estimate.

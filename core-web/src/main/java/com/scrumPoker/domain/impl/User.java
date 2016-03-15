@@ -1,4 +1,6 @@
-package com.scrumPoker.domain;
+package com.scrumPoker.domain.impl;
+
+import com.scrumPoker.domain.Identifiable;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;

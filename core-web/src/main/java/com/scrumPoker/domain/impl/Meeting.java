@@ -1,4 +1,6 @@
-package com.scrumPoker.domain;
+package com.scrumPoker.domain.impl;
+
+import com.scrumPoker.domain.CommonStatusEntity;
 
 /**
  * Main entity for scrum poker. User create meeting before

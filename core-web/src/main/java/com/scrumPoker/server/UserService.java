@@ -1,6 +1,6 @@
 package com.scrumPoker.server;
 
-import com.scrumPoker.domain.User;
+import com.scrumPoker.domain.impl.User;
 
 /**
  * @author Maxim Korkuts

@@ -1,6 +1,7 @@
-package com.scrumPoker.domain;
+package com.scrumPoker.domain.impl;
 
-import com.scrumPoker.domain.dict.Entity;
+import com.scrumPoker.domain.CommonEntity;
+import com.scrumPoker.domain.impl.dict.Entity;
 
 /**
  * Comment entity.Use for add comment in these entities: Meeting, Issue, Task.

@@ -1,4 +1,4 @@
-package com.scrumPoker.domain.dict;
+package com.scrumPoker.domain.impl.dict;
 
 /**
  * Status in what can be entity during estimating. From create moment to closed moment.
