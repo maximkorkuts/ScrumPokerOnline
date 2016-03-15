@@ -7,7 +7,9 @@ import com.scrumPoker.domain.dict.RoleType;
  * Control user role in this Meeting.
  * @author Maxim Korkuts
  */
-public class RoleInMeeting extends Identify {
+public class RoleInMeeting implements Identifiable<Long> {
+
+    private Long id;
 
     /**
      * User entity.
@@ -47,5 +49,19 @@ public class RoleInMeeting extends Identify {
 
     public void setMeeting(Meeting meeting) {
         this.meeting = meeting;
+    }
+
+    @Override
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @Override
+    public boolean isNew() {
+        return false;
     }
 }

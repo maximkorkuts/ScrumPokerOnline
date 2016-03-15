@@ -1,7 +1,6 @@
 package com.scrumPoker.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -10,7 +9,11 @@ import javax.validation.constraints.NotNull;
  */
 @Entity
 @Table(name = "user")
-public class User extends Identify {
+public class User implements Identifiable<Long> {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     /**
      * User email address, should be required, because it need to get invitation from other users.
@@ -85,5 +88,27 @@ public class User extends Identify {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    @Override
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    @Override
+    public boolean isNew() {
+        return false;
     }
 }

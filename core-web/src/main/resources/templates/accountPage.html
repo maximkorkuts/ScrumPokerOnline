@@ -32,12 +32,11 @@
       </ul>
     </div>
   </nav>
-
-  <div class="container">
-    <div class="section">
-      <h4>Your Account form</h4>
-      <div class="row">
-        <form class="col s12" action="" method="POST">
+  <form class="col s12" action="" method="POST">
+    <div class="container">
+      <div class="section">
+        <h4>Your Account form</h4>
+        <div class="row">
           <div class="row">
             <div class="input-field col s6">
               <i class="material-icons prefix">account_circle</i>
@@ -58,16 +57,27 @@
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <i class="material-icons prefix">lock</i>
-              <input id="password" type="password" class="validate"/>
-              <label for="password">Password</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
               <i class="material-icons prefix">email</i>
               <input id="email" type="email" class="validate"/>
               <label for="email">Email</label>
+            </div>
+          </div>
+          <h5>Change password</h5>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">lock</i>
+              <input id="oldPassword" type="password" class="validate"/>
+              <label for="oldPassword">Old password</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">lock_outline</i>
+              <input id="newPassword" type="password" class="validate"/>
+              <label for="newPassword">New password</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">lock_outline</i>
+              <input id="newRepeatPassword" type="password" class="validate"/>
+              <label for="newRepeatPassword">Repeat new password</label>
             </div>
           </div>
           <div class="row right">
@@ -75,10 +85,10 @@
               Save
             </a>
           </div>
-        </form>
+        </div>
       </div>
     </div>
-  </div>
+  </form>
 
   <footer class="page-footer teal">
     <div class="container">
