@@ -2,7 +2,7 @@
   $(function(){
 
     $('.parallax').parallax();
-
+    $('ul.tabs').tabs('select_tab', 'tab_id');
   }); // end of document ready
 })(jQuery); // end of jQuery name space
 

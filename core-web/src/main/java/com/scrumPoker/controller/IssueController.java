@@ -18,4 +18,12 @@ public class IssueController {
     public String issueListPage() throws Exception {
         return "issuesPage";
     }
+
+    /**
+     * Return issue view "issuePageView.html"
+     */
+    @RequestMapping("/view")
+    public String issueViewPage() throws Exception {
+        return "issuesPageView";
+    }
 }

@@ -15,7 +15,15 @@ public class TaskController {
      * Return main list with all tasks "tasksPage.html"
      */
     @RequestMapping("/list")
-    public String meetingListPage() throws Exception {
+    public String taskListPage() throws Exception {
         return "tasksPage";
+    }
+
+    /**
+     * Return task view "taskPageView.html"
+     */
+    @RequestMapping("/view")
+    public String taskViewPage() throws Exception {
+        return "taskPageView";
     }
 }

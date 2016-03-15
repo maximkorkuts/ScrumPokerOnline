@@ -20,7 +20,7 @@ public class MeetingController {
     }
 
     /**
-     * Return main list with all meetings "meetingsPage.html"
+     * Return meeting view "meetingPageView.html"
      */
     @RequestMapping("/view")
     public String meetingViewPage() throws Exception {
