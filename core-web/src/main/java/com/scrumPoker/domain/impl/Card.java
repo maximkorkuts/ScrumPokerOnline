@@ -1,6 +1,6 @@
 package com.scrumPoker.domain.impl;
 
-import com.scrumPoker.domain.impl.dict.CardBrand;
+import com.scrumPoker.domain.dict.CardBrand;
 
 /**
  * Entity provide String name of class, estimate and to with what Brand it used. Some cards can be for several brands.

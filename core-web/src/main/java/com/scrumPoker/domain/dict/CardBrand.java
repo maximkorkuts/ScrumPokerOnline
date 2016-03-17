@@ -1,4 +1,4 @@
-package com.scrumPoker.domain.impl.dict;
+package com.scrumPoker.domain.dict;
 
 /**
  * Class for exist types of brand for cards in Scrum Poker.

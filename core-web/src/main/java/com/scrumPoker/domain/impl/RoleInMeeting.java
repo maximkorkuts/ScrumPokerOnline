@@ -1,7 +1,7 @@
 package com.scrumPoker.domain.impl;
 
 import com.scrumPoker.domain.Identifiable;
-import com.scrumPoker.domain.impl.dict.RoleType;
+import com.scrumPoker.domain.dict.RoleType;
 
 /**
  * Entity that resolve dependency between User and Meeting.

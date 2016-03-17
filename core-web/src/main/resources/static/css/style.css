@@ -106,3 +106,14 @@ div#modal3 {
 .input-field input[type=search] {
   width: 740px;
 }
+
+.rectangleCard {
+  width: 100px;
+  height: 150px;
+  background: #C4C4FF;
+  border-radius: 10px;
+  border-style: double;
+  margin: 8px;
+  padding: 30px 5px;
+  text-align: center;
+}

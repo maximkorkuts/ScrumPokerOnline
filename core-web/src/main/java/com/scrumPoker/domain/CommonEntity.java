@@ -1,5 +1,7 @@
 package com.scrumPoker.domain;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * Have two fields, that need for several main classes.
  * @author Maxim Korkuts
@@ -7,9 +9,11 @@ package com.scrumPoker.domain;
 public abstract class CommonEntity implements Identifiable<Long>{
 
     private Long id;
+
     /**
      * Name of entity.
      */
+    @NotNull
     private String title;
 
     /**

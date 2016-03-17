@@ -24,6 +24,6 @@ public class IssueController {
      */
     @RequestMapping("/view")
     public String issueViewPage() throws Exception {
-        return "issuesPageView";
+        return "issuePageView";
     }
 }

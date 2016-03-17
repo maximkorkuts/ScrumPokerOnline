@@ -1,4 +1,4 @@
-package com.scrumPoker.domain.impl.dict;
+package com.scrumPoker.domain.dict;
 
 /**
  * Role that user can have to access the meeting

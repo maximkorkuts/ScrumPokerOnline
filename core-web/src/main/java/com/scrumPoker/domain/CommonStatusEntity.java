@@ -1,6 +1,6 @@
 package com.scrumPoker.domain;
 
-import com.scrumPoker.domain.impl.dict.EntityStatus;
+import com.scrumPoker.domain.dict.EntityStatus;
 
 /**
  * Abstract entity with status field.
