@@ -107,6 +107,12 @@ div#modal3 {
   width: 740px;
 }
 
+.cardList li {
+  list-style-type: none;
+  display: inline;
+  margin-right: 5px;
+}
+
 .rectangleCard {
   width: 100px;
   height: 150px;
@@ -116,4 +122,5 @@ div#modal3 {
   margin: 8px;
   padding: 30px 5px;
   text-align: center;
+  font-size: 50px;
 }

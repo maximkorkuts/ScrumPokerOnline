@@ -8,10 +8,19 @@ import com.scrumPoker.domain.dict.CardBrand;
  */
 public class Card {
 
+    /**
+     * Card title.
+     */
     private String title;
 
+    /**
+     * Mark estimate in time
+     */
     private int estimate;
 
+    /**
+     * Brand of this card.
+     */
     private CardBrand cardBrand;
 
     /**getters and setters*/
