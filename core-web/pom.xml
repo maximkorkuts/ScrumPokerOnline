@@ -96,11 +96,11 @@
             <version>${mysql.version}</version>
             <scope>runtime</scope>
         </dependency>
-        <!--<dependency>-->
-        <!--<groupId>org.liquibase</groupId>-->
-        <!--<artifactId>liquibase-core</artifactId>-->
-        <!--<version>${liquibase.version}</version>-->
-        <!--</dependency>-->
+        <dependency>
+        <groupId>org.liquibase</groupId>
+        <artifactId>liquibase-core</artifactId>
+        <version>${liquibase.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -109,33 +109,33 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <!--<plugin>-->
-            <!--<groupId>org.liquibase</groupId>-->
-            <!--<artifactId>liquibase-maven-plugin</artifactId>-->
-            <!--<executions>-->
-            <!--<execution>-->
-            <!--<phase>install</phase>-->
-            <!--<goals>-->
-            <!--<goal>update</goal>-->
-            <!--</goals>-->
-            <!--</execution>-->
-            <!--</executions>-->
-            <!--<configuration>-->
-            <!--<changeLogFile>${project.basedir}/src/main/resources/db/migration.xml</changeLogFile>-->
-            <!--<driver>com.mysql.jdbc.Driver</driver>-->
-            <!--<url>${scrumPoker.db.url}</url>-->
-            <!--<username>${scrumPoker.db.username}</username>-->
-            <!--<password>${scrumPoker.db.password}</password>-->
-            <!--<promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>-->
-            <!--</configuration>-->
-            <!--<dependencies>-->
-            <!--<dependency>-->
-            <!--<groupId>mysql</groupId>-->
-            <!--<artifactId>mysql-connector-java</artifactId>-->
-            <!--<version>${mysql.version}</version>-->
-            <!--</dependency>-->
-            <!--</dependencies>-->
-            <!--</plugin>-->
+            <plugin>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                    <phase>install</phase>
+                    <goals>
+                    <goal>update</goal>
+                    </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <changeLogFile>${project.basedir}/src/main/resources/db/migration.xml</changeLogFile>
+                    <driver>com.mysql.jdbc.Driver</driver>
+                    <url>${scrumPoker.db.url}</url>
+                    <username>${scrumPoker.db.username}</username>
+                    <password>${scrumPoker.db.password}</password>
+                    <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                    <groupId>mysql</groupId>
+                    <artifactId>mysql-connector-java</artifactId>
+                    <version>${mysql.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
         </plugins>
 
         <resources>
