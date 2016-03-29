@@ -1,6 +1,6 @@
 package com.scrumPoker.domain.impl;
 
-import com.scrumPoker.domain.Identifiable;
+import com.scrumPoker.domain.CommonIdentifyEntity;
 import com.scrumPoker.domain.dict.RoleType;
 
 /**
@@ -8,9 +8,7 @@ import com.scrumPoker.domain.dict.RoleType;
  * Control user role in this Meeting.
  * @author Maxim Korkuts
  */
-public class RoleInMeeting implements Identifiable<Long> {
-
-    private Long id;
+public class RoleInMeeting extends CommonIdentifyEntity {
 
     /**
      * User entity.
@@ -50,19 +48,5 @@ public class RoleInMeeting implements Identifiable<Long> {
 
     public void setMeeting(Meeting meeting) {
         this.meeting = meeting;
-    }
-
-    @Override
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Override
-    public boolean isNew() {
-        return false;
     }
 }

@@ -1,17 +1,26 @@
 package com.scrumPoker.domain.impl;
 
-import com.scrumPoker.domain.CommonStatusEntity;
+import com.scrumPoker.domain.CommonTimeEntity;
+
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 /**
  * Entity name in meeting. This entity can have a lot of tasks.
  * @author Maxim Korkuts
  */
-public class Issue extends CommonStatusEntity {
+@Entity
+@Table(name = "issue")
+public class Issue extends CommonTimeEntity {
 
     /**
      * Main meeting entity for this issue.
      * Issue can be only in one Meeting.
      */
+    @ManyToOne
+    @JoinColumn(name = "id_meeting")
     private Meeting meeting;
 
     /**getters and setters*/

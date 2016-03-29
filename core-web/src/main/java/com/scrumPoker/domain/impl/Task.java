@@ -1,13 +1,13 @@
 package com.scrumPoker.domain.impl;
 
-import com.scrumPoker.domain.CommonStatusEntity;
+import com.scrumPoker.domain.CommonTimeEntity;
 
 /**
  * Entity that user need to estimate.
  * Can have parent Issue, if it null, so it dependence from Meeting.
  * @author Maxim Korkuts
  */
-public class Task extends CommonStatusEntity {
+public class Task extends CommonTimeEntity {
 
     /**
      * Parent Meeting.

@@ -1,8 +1,9 @@
 package com.scrumPoker.domain.impl;
 
-import com.scrumPoker.domain.Identifiable;
+import com.scrumPoker.domain.CommonIdentifyEntity;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -11,11 +12,7 @@ import javax.validation.constraints.NotNull;
  */
 @Entity
 @Table(name = "user")
-public class User implements Identifiable<Long> {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+public class User extends CommonIdentifyEntity {
 
     /**
      * User email address, should be required, because it need to get invitation from other users.
@@ -100,17 +97,4 @@ public class User implements Identifiable<Long> {
         this.token = token;
     }
 
-    @Override
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    @Override
-    public boolean isNew() {
-        return false;
-    }
 }

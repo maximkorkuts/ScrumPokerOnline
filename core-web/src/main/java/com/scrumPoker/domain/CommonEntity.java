@@ -1,14 +1,14 @@
 package com.scrumPoker.domain;
 
+import javax.persistence.MappedSuperclass;
 import javax.validation.constraints.NotNull;
 
 /**
  * Have two fields, that need for several main classes.
  * @author Maxim Korkuts
  */
-public abstract class CommonEntity implements Identifiable<Long>{
-
-    private Long id;
+@MappedSuperclass
+public abstract class CommonEntity extends CommonIdentifyEntity {
 
     /**
      * Name of entity.
@@ -36,19 +36,5 @@ public abstract class CommonEntity implements Identifiable<Long>{
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    @Override
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Override
-    public boolean isNew() {
-        return false;
     }
 }
