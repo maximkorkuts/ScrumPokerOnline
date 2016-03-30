@@ -20,9 +20,12 @@ public class UserToCard extends CommonIdentifyEntity {
     private User user;
 
     /**
-     * User card, that he choose.
+     * User cards, that he choose. He have multiple choose.
+     * User can choose several estimate task, but he could not combine card with different Card type.
+     * For example, User can't combine 1 hour card and coffee card.
+     * It controls by logic on UI and validators levels sides.
      */
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "id_card")
     private Card card;
 

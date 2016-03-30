@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd"
+        logicalFilePath="update2016-03-30_insert_cards.xml">
+
+    <changeSet id="update2016-03-30_insert_cards_01" author="m.korkuts" runOnChange="true">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="card" schemaName="scrumPoker"/>
+        </preConditions>
+        <insert tableName="card" schemaName="scrumPoker">
+            <column name="id" value="1"/>
+            <column name="title" value="0"/>
+            <column name="card_brand" value="SCRUM"/>
+            <column name="card_type" value="NUMBER"/>
+            <column name="estimate" value="0.0"/>
+        </insert>
+        <rollback>
+            DELETE FROM Person WHERE id = 1;
+        </rollback>
+    </changeSet>
+
+    <changeSet id="update2016-03-30_insert_cards_02" author="m.korkuts" runOnChange="true">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="card" schemaName="scrumPoker"/>
+        </preConditions>
+        <insert tableName="card" schemaName="scrumPoker">
+            <column name="id" value="2"/>
+            <column name="title" value="1/2"/>
+            <column name="card_brand" value="SCRUM"/>
+            <column name="card_type" value="NUMBER"/>
+            <column name="estimate" value="0.5"/>
+        </insert>
+        <rollback>
+            DELETE FROM Person WHERE id = 2;
+        </rollback>
+    </changeSet>
+
+    <changeSet id="update2016-03-30_insert_cards_03" author="m.korkuts" runOnChange="true">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="card" schemaName="scrumPoker"/>
+        </preConditions>
+        <insert tableName="card" schemaName="scrumPoker">
+            <column name="id" value="3"/>
+            <column name="title" value="1"/>
+            <column name="card_brand" value="SCRUM"/>
+            <column name="card_type" value="NUMBER"/>
+            <column name="estimate" value="1.0"/>
+        </insert>
+        <rollback>
+            DELETE FROM Person WHERE id = 3;
+        </rollback>
+    </changeSet>
+
+    <changeSet id="update2016-03-30_insert_cards_04" author="m.korkuts" runOnChange="true">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="card" schemaName="scrumPoker"/>
+        </preConditions>
+        <insert tableName="card" schemaName="scrumPoker">
+            <column name="id" value="4"/>
+            <column name="title" value="2"/>
+            <column name="card_brand" value="SCRUM"/>
+            <column name="card_type" value="NUMBER"/>
+            <column name="estimate" value="2.0"/>
+        </insert>
+        <rollback>
+            DELETE FROM Person WHERE id = 4;
+        </rollback>
+    </changeSet>
+
+    <changeSet id="update2016-03-30_insert_cards_05" author="m.korkuts" runOnChange="true">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="card" schemaName="scrumPoker"/>
+        </preConditions>
+        <insert tableName="card" schemaName="scrumPoker">
+            <column name="id" value="5"/>
+            <column name="title" value="3"/>
+            <column name="card_brand" value="SCRUM"/>
+            <column name="card_type" value="NUMBER"/>
+            <column name="estimate" value="3.0"/>
+        </insert>
+        <rollback>
+            DELETE FROM Person WHERE id = 5;
+        </rollback>
+    </changeSet>
+
+    <changeSet id="update2016-03-30_insert_cards_06" author="m.korkuts" runOnChange="true">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="card" schemaName="scrumPoker"/>
+        </preConditions>
+        <insert tableName="card" schemaName="scrumPoker">
+            <column name="id" value="6"/>
+            <column name="title" value="5"/>
+            <column name="card_brand" value="SCRUM"/>
+            <column name="card_type" value="NUMBER"/>
+            <column name="estimate" value="5.0"/>
+        </insert>
+        <rollback>
+            DELETE FROM Person WHERE id = 6;
+        </rollback>
+    </changeSet>
+
+    <changeSet id="update2016-03-30_insert_cards_07" author="m.korkuts" runOnChange="true">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="card" schemaName="scrumPoker"/>
+        </preConditions>
+        <insert tableName="card" schemaName="scrumPoker">
+            <column name="id" value="7"/>
+            <column name="title" value="8"/>
+            <column name="card_brand" value="SCRUM"/>
+            <column name="card_type" value="NUMBER"/>
+            <column name="estimate" value="8.0"/>
+        </insert>
+        <rollback>
+            DELETE FROM Person WHERE id = 7;
+        </rollback>
+    </changeSet>
+
+    <changeSet id="update2016-03-30_insert_cards_08" author="m.korkuts" runOnChange="true">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="card" schemaName="scrumPoker"/>
+        </preConditions>
+        <insert tableName="card" schemaName="scrumPoker">
+            <column name="id" value="8"/>
+            <column name="title" value="13"/>
+            <column name="card_brand" value="SCRUM"/>
+            <column name="card_type" value="NUMBER"/>
+            <column name="estimate" value="13.0"/>
+        </insert>
+        <rollback>
+            DELETE FROM Person WHERE id = 8;
+        </rollback>
+    </changeSet>
+
+    <changeSet id="update2016-03-30_insert_cards_09" author="m.korkuts" runOnChange="true">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="card" schemaName="scrumPoker"/>
+        </preConditions>
+        <insert tableName="card" schemaName="scrumPoker">
+            <column name="id" value="9"/>
+            <column name="title" value="20"/>
+            <column name="card_brand" value="SCRUM"/>
+            <column name="card_type" value="NUMBER"/>
+            <column name="estimate" value="20.0"/>
+        </insert>
+        <rollback>
+            DELETE FROM Person WHERE id = 9;
+        </rollback>
+    </changeSet>
+
+    <changeSet id="update2016-03-30_insert_cards_10" author="m.korkuts" runOnChange="true">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="card" schemaName="scrumPoker"/>
+        </preConditions>
+        <insert tableName="card" schemaName="scrumPoker">
+            <column name="id" value="10"/>
+            <column name="title" value="40"/>
+            <column name="card_brand" value="SCRUM"/>
+            <column name="card_type" value="NUMBER"/>
+            <column name="estimate" value="40.0"/>
+        </insert>
+        <rollback>
+            DELETE FROM Person WHERE id = 10;
+        </rollback>
+    </changeSet>
+
+    <changeSet id="update2016-03-30_insert_cards_11" author="m.korkuts" runOnChange="true">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="card" schemaName="scrumPoker"/>
+        </preConditions>
+        <insert tableName="card" schemaName="scrumPoker">
+            <column name="id" value="11"/>
+            <column name="title" value="100"/>
+            <column name="card_brand" value="SCRUM"/>
+            <column name="card_type" value="NUMBER"/>
+            <column name="estimate" value="100.0"/>
+        </insert>
+        <rollback>
+            DELETE FROM Person WHERE id = 11;
+        </rollback>
+    </changeSet>
+
+    <changeSet id="update2016-03-30_insert_cards_12" author="m.korkuts" runOnChange="true">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="card" schemaName="scrumPoker"/>
+        </preConditions>
+        <insert tableName="card" schemaName="scrumPoker">
+            <column name="id" value="12"/>
+            <column name="title" value="?"/>
+            <column name="img_path" value="/static/images/question.jpg"/>
+            <column name="card_brand" value="SCRUM"/>
+            <column name="card_type" value="IMAGE"/>
+            <column name="estimate" value="0.0"/>
+        </insert>
+        <rollback>
+            DELETE FROM Person WHERE id = 12;
+        </rollback>
+    </changeSet>
+
+    <changeSet id="update2016-03-30_insert_cards_13" author="m.korkuts" runOnChange="true">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="card" schemaName="scrumPoker"/>
+        </preConditions>
+        <insert tableName="card" schemaName="scrumPoker">
+            <column name="id" value="13"/>
+            <column name="title" value="coffee"/>
+            <column name="img_path" value="/static/images/coffee.jpg"/>
+            <column name="card_brand" value="SCRUM"/>
+            <column name="card_type" value="IMAGE"/>
+            <column name="estimate" value="0.0"/>
+        </insert>
+        <rollback>
+            DELETE FROM Person WHERE id = 13;
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>
