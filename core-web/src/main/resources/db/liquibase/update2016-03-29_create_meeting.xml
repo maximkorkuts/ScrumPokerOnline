@@ -21,6 +21,9 @@
             <column name="status" type="varchar(255)"/>
             <column name="start_time" type="timestamp"/>
             <column name="end_time" type="timestamp"/>
+            <column name="url_observer" type="varchar(255)"/>
+            <column name="url_player" type="varchar(255)"/>
+            <column name="card_brand" type="varchar(50)"/>
         </createTable>
     </changeSet>
 

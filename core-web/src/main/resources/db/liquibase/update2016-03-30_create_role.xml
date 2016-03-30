@@ -3,28 +3,26 @@
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd"
-        logicalFilePath="update2016-03-29_create_issue.xml">
+        logicalFilePath="update2016-03-30_create_role.xml">
 
-    <changeSet id="update2016-03-29_create_issue" author="m.korkuts" runOnChange="true">
+    <changeSet id="update2016-03-30_create_role" author="m.korkuts" runOnChange="true">
         <preConditions onFail="MARK_RAN">
             <not>
-                <tableExists tableName="issue" schemaName="scrumPoker"/>
+                <tableExists tableName="role" schemaName="scrumPoker"/>
             </not>
         </preConditions>
 
-        <createTable tableName="issue" schemaName="scrumPoker">
+        <createTable tableName="role" schemaName="scrumPoker">
             <column name="id" type="bigserial">
                 <constraints primaryKey="true"/>
             </column>
-            <column name="title" type="varchar(255)"/>
-            <column name="description" type="varchar(255)"/>
-            <column name="status" type="varchar(255)"/>
-            <column name="start_time" type="timestamp"/>
-            <column name="end_time" type="timestamp"/>
+            <column name="role_type" type="varchar(50)"/>
             <column name="id_meeting" type="bigint">
                 <constraints nullable="false" unique="false"/>
             </column>
-            <column name="estimate" type="bigint"/>
+            <column name="id_user" type="bigint">
+                <constraints nullable="false" unique="false"/>
+            </column>
         </createTable>
     </changeSet>
 

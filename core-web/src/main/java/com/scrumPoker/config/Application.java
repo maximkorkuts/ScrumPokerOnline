@@ -38,7 +38,7 @@ public class Application {
     }
 
     //All three beans down is for CrudRepository enabling.
-    //TODO try to configure without it
+    //TODO try to configure without these beans
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();

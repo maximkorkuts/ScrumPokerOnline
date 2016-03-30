@@ -1,6 +1,7 @@
 package com.scrumPoker.domain.impl;
 
-import com.scrumPoker.domain.CommonTimeEntity;
+
+import com.scrumPoker.domain.CommonEstimateEntity;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -13,7 +14,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "issue")
-public class Issue extends CommonTimeEntity {
+public class Issue extends CommonEstimateEntity {
 
     /**
      * Main meeting entity for this issue.
