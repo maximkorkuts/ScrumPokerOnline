@@ -26,6 +26,44 @@
                 <constraints nullable="false" unique="false"/>
             </column>
         </createTable>
+
+        <rollback>
+            <dropTable tableName="user_to_card" schemaName="scrumPoker"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="add_fk_to_user_to_card" author="m.korkuts" runOnChange="true">
+        <addForeignKeyConstraint constraintName="​​FK_user_to_card2user"
+                                 referencedTableName="user"
+                                 referencedColumnNames="id"
+                                 baseTableName="user_to_card"
+                                 baseColumnNames="id_user"/>
+
+        <addForeignKeyConstraint constraintName="​​FK_user_to_card2card"
+                                 referencedTableName="card"
+                                 referencedColumnNames="id"
+                                 baseTableName="user_to_card"
+                                 baseColumnNames="id_card"/>
+
+        <addForeignKeyConstraint constraintName="​​FK_user_to_card2task"
+                                 referencedTableName="task"
+                                 referencedColumnNames="id"
+                                 baseTableName="user_to_card"
+                                 baseColumnNames="id_task"/>
+
+        <rollback>
+            <dropUniqueConstraint constraintName="​​FK_user_to_card2user"
+                                  schemaName="scrumPoker"
+                                  tableName="user_to_card"/>
+
+            <dropUniqueConstraint constraintName="​​FK_user_to_card2card"
+                                  schemaName="scrumPoker"
+                                  tableName="user_to_card"/>
+
+            <dropUniqueConstraint constraintName="​​FK_user_to_card2task"
+                                  schemaName="scrumPoker"
+                                  tableName="user_to_card"/>
+        </rollback>
     </changeSet>
 
 </databaseChangeLog>

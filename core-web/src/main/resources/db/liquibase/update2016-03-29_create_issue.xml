@@ -26,6 +26,24 @@
             </column>
             <column name="estimate" type="bigint"/>
         </createTable>
+
+        <rollback>
+            <dropTable tableName="issue" schemaName="scrumPoker"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="add_fk_to_issue" author="m.korkuts" runOnChange="true">
+        <addForeignKeyConstraint constraintName="​​FK_issue2meeting"
+                                 referencedTableName="meeting"
+                                 referencedColumnNames="id"
+                                 baseTableName="issue"
+                                 baseColumnNames="id_meeting"/>
+
+        <rollback>
+            <dropUniqueConstraint constraintName="​​FK_issue2meeting"
+                                  schemaName="scrumPoker"
+                                  tableName="issue"/>
+        </rollback>
     </changeSet>
 
 </databaseChangeLog>

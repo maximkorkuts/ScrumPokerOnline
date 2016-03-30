@@ -24,6 +24,34 @@
                 <constraints nullable="false" unique="false"/>
             </column>
         </createTable>
+
+        <rollback>
+            <dropTable tableName="role" schemaName="scrumPoker"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="add_fk_to_role" author="m.korkuts" runOnChange="true">
+        <addForeignKeyConstraint constraintName="​​FK_role2user"
+                                 referencedTableName="user"
+                                 referencedColumnNames="id"
+                                 baseTableName="role"
+                                 baseColumnNames="id_user"/>
+
+        <addForeignKeyConstraint constraintName="​​FK_role2meeting"
+                                 referencedTableName="meeting"
+                                 referencedColumnNames="id"
+                                 baseTableName="role"
+                                 baseColumnNames="id_meeting"/>
+
+        <rollback>
+            <dropUniqueConstraint constraintName="​​FK_role2user"
+                                  schemaName="scrumPoker"
+                                  tableName="role"/>
+
+            <dropUniqueConstraint constraintName="​​FK_role2meeting"
+                                  schemaName="scrumPoker"
+                                  tableName="role"/>
+        </rollback>
     </changeSet>
 
 </databaseChangeLog>

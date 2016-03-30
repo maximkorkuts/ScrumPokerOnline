@@ -22,6 +22,10 @@
             <column name="login" type="varchar(50)"/>
             <column name="password" type="varchar(50)"/>
         </createTable>
+
+        <rollback>
+            <dropTable tableName="user" schemaName="scrumPoker"/>
+        </rollback>
     </changeSet>
 
 </databaseChangeLog>

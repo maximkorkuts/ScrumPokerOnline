@@ -27,6 +27,24 @@
             </column>
             <column name="entity" type="varchar(50)"/>
         </createTable>
+
+        <rollback>
+            <dropTable tableName="comment" schemaName="scrumPoker"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="add_fk_to_comment" author="m.korkuts" runOnChange="true">
+        <addForeignKeyConstraint constraintName="​​FK_comment2user"
+                                 referencedTableName="user"
+                                 referencedColumnNames="id"
+                                 baseTableName="comment"
+                                 baseColumnNames="id_user"/>
+
+        <rollback>
+            <dropUniqueConstraint constraintName="​​FK_comment2user"
+                                  schemaName="scrumPoker"
+                                  tableName="comment"/>
+        </rollback>
     </changeSet>
 
 </databaseChangeLog>

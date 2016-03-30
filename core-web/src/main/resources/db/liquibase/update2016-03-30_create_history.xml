@@ -26,6 +26,24 @@
                 <constraints nullable="false" unique="false"/>
             </column>
         </createTable>
+
+        <rollback>
+            <dropTable tableName="history" schemaName="scrumPoker"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="add_fk_to_history" author="m.korkuts" runOnChange="true">
+        <addForeignKeyConstraint constraintName="​​FK_history2user"
+                                 referencedTableName="user"
+                                 referencedColumnNames="id"
+                                 baseTableName="history"
+                                 baseColumnNames="id_user"/>
+
+        <rollback>
+            <dropUniqueConstraint constraintName="​​FK_history2user"
+                                  schemaName="scrumPoker"
+                                  tableName="history"/>
+        </rollback>
     </changeSet>
 
 </databaseChangeLog>

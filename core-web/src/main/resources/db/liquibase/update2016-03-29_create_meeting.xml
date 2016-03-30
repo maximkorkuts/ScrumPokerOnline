@@ -25,6 +25,10 @@
             <column name="url_player" type="varchar(255)"/>
             <column name="card_brand" type="varchar(50)"/>
         </createTable>
+
+        <rollback>
+            <dropTable tableName="meeting" schemaName="scrumPoker"/>
+        </rollback>
     </changeSet>
 
 </databaseChangeLog>

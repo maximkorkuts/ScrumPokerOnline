@@ -1,4 +1,4 @@
-package com.scrumPoker.server;
+package com.scrumPoker.service;
 
 import com.scrumPoker.domain.impl.User;
 

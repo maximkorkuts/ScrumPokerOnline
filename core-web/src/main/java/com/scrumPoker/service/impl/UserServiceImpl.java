@@ -1,8 +1,8 @@
-package com.scrumPoker.server.impl;
+package com.scrumPoker.service.impl;
 
 import com.scrumPoker.dao.UserDao;
 import com.scrumPoker.domain.impl.User;
-import com.scrumPoker.server.UserService;
+import com.scrumPoker.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

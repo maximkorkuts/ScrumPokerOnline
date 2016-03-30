@@ -28,6 +28,34 @@
                 <constraints nullable="true" unique="false"/>
             </column>
         </createTable>
+
+        <rollback>
+            <dropTable tableName="task" schemaName="scrumPoker"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="add_fk_to_task" author="m.korkuts" runOnChange="true">
+        <addForeignKeyConstraint constraintName="​​FK_task2issue"
+                                 referencedTableName="issue"
+                                 referencedColumnNames="id"
+                                 baseTableName="task"
+                                 baseColumnNames="id_issue"/>
+
+        <addForeignKeyConstraint constraintName="​​FK_task2meeting"
+                                 referencedTableName="meeting"
+                                 referencedColumnNames="id"
+                                 baseTableName="task"
+                                 baseColumnNames="id_meeting"/>
+
+        <rollback>
+            <dropUniqueConstraint constraintName="​​FK_task2issue"
+                                  schemaName="scrumPoker"
+                                  tableName="task"/>
+
+            <dropUniqueConstraint constraintName="​​FK_task2meeting"
+                                  schemaName="scrumPoker"
+                                  tableName="task"/>
+        </rollback>
     </changeSet>
 
 </databaseChangeLog>

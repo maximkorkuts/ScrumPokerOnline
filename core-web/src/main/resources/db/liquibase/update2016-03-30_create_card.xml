@@ -23,6 +23,10 @@
             <column name="card_type" type="varchar(50)"/>
             <column name="estimate" type="bigint"/>
         </createTable>
+
+        <rollback>
+            <dropTable tableName="card" schemaName="scrumPoker"/>
+        </rollback>
     </changeSet>
 
 </databaseChangeLog>
