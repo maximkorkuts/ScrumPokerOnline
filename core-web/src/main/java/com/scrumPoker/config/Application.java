@@ -6,7 +6,6 @@ import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.annotation.PropertySources;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
@@ -15,9 +14,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  */
 @Configuration
 @SpringBootApplication
-@PropertySources(value = {
-        @PropertySource("classpath:application.properties"),
-})
+@PropertySource("classpath:application.properties")
 @ComponentScan(basePackages = {"com.scrumPoker.service"})
 @EnableJpaRepositories(basePackages = {"com.scrumPoker.dao"})
 @EntityScan(basePackages = {"com.scrumPoker.domain"})
